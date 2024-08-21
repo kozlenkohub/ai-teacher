@@ -3,6 +3,7 @@
 import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Box, CameraControls, Environment, Gltf, OrbitControls } from '@react-three/drei';
+import Teacher from './Teacher';
 
 const Experience = () => {
   return (
@@ -11,8 +12,10 @@ const Experience = () => {
         <OrbitControls />
         <CameraManager />
         <Environment preset="sunset" />
-
         <ambientLight intensity={0.8} color="pink" />
+
+        <Teacher teacher={'Nanami'} position={[0.2, -1.7, -2]} />
+
         <Gltf src="/models/classroom_default.glb" position={[0.2, -1.7, -2]} />
       </Canvas>
     </>
